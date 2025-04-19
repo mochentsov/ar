@@ -1,0 +1,30 @@
+!DOCTYPE html
+html
+head
+    titleAR 3D Model Viewertitle
+    !-- Подключаем Model Viewer --
+    script type=module src=httpsunpkg.com@googlemodel-viewerdistmodel-viewer.min.jsscript
+    style
+        model-viewer {
+            width 100%;
+            height 500px;
+        }
+    style
+head
+body
+    h1Моя 3D-модель в ARh1
+    
+    !-- Вставьте свою модель --
+    model-viewer 
+        src=храм.glb 
+        ar 
+        ar-modes=scene-viewer quick-look webxr 
+        camera-controls 
+        shadow-intensity=1
+        alt=3D модель
+        button slot=ar-buttonОткрыть в ARbutton
+    model-viewer
+
+    pОткройте эту страницу на iPhone и нажмите Открыть в AR.p
+body
+html
